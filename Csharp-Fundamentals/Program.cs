@@ -10,6 +10,7 @@ namespace Csharp_Fundamentals
     {
         static void Main(string[] args)
         {
+            Console.Write("Hello World!");
         }
     }
 }

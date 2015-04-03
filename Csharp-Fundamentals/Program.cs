@@ -10,12 +10,33 @@ namespace Csharp_Fundamentals
     {
         static void Main(string[] args)
         {
-            Console.Write("Hello World!");
-            // keyboard shortcuts
-            // ctrl k, ctrl c comment 
-            // ctrl k, ctrl u uncomment 
-            // duplicte line end of line ctrl c crtl v
-            // format document crtl k ctrl d
+            string name = "SteJ O'Connor";
+
+            int index = name.IndexOf("n",
+                name.IndexOf("n") + 1);
+
+            string lastIndex = name.Substring(5, 2);
+            string removeIndex = name.Remove(0, 7);
+            string replaceIndex = name.Replace("O'Connor", string.Empty);
+            string replaceNwithL = name.Replace("n", "l");
+
+            Console.WriteLine(index);
+            // 10
+
+            Console.WriteLine(lastIndex);
+            // O'Connor (5)
+            
+            Console.WriteLine(lastIndex);            
+            // O'
+
+            Console.WriteLine(removeIndex);
+            // Connor
+
+            Console.WriteLine(replaceIndex);
+            // SteJ
+
+            Console.WriteLine(replaceNwithL);
+            // SteJ O'Collor
         }
     }
 }

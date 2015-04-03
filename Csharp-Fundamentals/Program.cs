@@ -10,33 +10,18 @@ namespace Csharp_Fundamentals
     {
         static void Main(string[] args)
         {
-            string name = "SteJ O'Connor";
+            StringBuilder x = new StringBuilder(),
+            y = x;
 
-            int index = name.IndexOf("n",
-                name.IndexOf("n") + 1);
+            x.Append("Hello ");
+            y.Append("World!");
 
-            string lastIndex = name.Substring(5, 2);
-            string removeIndex = name.Remove(0, 7);
-            string replaceIndex = name.Replace("O'Connor", string.Empty);
-            string replaceNwithL = name.Replace("n", "l");
+            Console.WriteLine(x.ToString());
 
-            Console.WriteLine(index);
-            // 10
+            x = null;
 
-            Console.WriteLine(lastIndex);
-            // O'Connor (5)
-            
-            Console.WriteLine(lastIndex);            
-            // O'
-
-            Console.WriteLine(removeIndex);
-            // Connor
-
-            Console.WriteLine(replaceIndex);
-            // SteJ
-
-            Console.WriteLine(replaceNwithL);
-            // SteJ O'Collor
+            Console.WriteLine(x); // blank line
+            Console.WriteLine(y.ToString());            
         }
     }
 }

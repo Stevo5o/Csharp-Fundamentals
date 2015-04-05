@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Csharp_Fundamentals.MyFirstDataTypes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,18 +11,7 @@ namespace Csharp_Fundamentals
     {
         static void Main(string[] args)
         {
-            StringBuilder x = new StringBuilder(),
-            y = x;
-
-            x.Append("Hello ");
-            y.Append("World!");
-
-            Console.WriteLine(x.ToString());
-
-            x = null;
-
-            Console.WriteLine(x); // blank line
-            Console.WriteLine(y.ToString());            
+            Person person = new Person();
         }
     }
 }

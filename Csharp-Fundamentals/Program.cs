@@ -11,7 +11,9 @@ namespace Csharp_Fundamentals
     {
         static void Main(string[] args)
         {
-            Person person = new Person();
+            Person person = new Person("SteJ", "O'Connor");
+
+            Console.WriteLine(person.SayHello("SteJ"));
         }
     }
 }

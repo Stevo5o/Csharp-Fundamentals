@@ -11,9 +11,12 @@ namespace Csharp_Fundamentals
     {
         static void Main(string[] args)
         {
-            Person person = new Person("SteJ", "O'Connor");            
+            Person stej = new Person("SteJ", "O'Connor"),
+                kate = new Person("Kate", "Bush");
 
-            Console.WriteLine(person.FirstName + " " + person.LastName);
+            string greeting = stej.SayHello(kate);
+
+            Console.WriteLine(greeting);
         }
     }
 }

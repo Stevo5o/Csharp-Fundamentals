@@ -16,21 +16,42 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
         // remove overload and add optional parameters
         public Person(string firstName, string lastName = "")
         {
-            FirstName = firstName;  
+            if (string.IsNullOrEmpty(firstName) || string.IsNullOrWhiteSpace(firstName))
+            {
+                throw new ArgumentException("First name cannot be null, empty or whitespace");
+            }
+
+            if((lastName == null || lastName.Trim() == string.Empty) && lastName != string.Empty)
+            {
+                throw new ArgumentException("Last name cannot be null or whitespace");
+            }
+
+            FirstName = firstName;
             LastName = lastName;
         }
 
         public string SayHello(string name)
         {
+            // null
+            // empty
+            // whitespace
+            if (string.IsNullOrEmpty(name) || string.IsNullOrWhiteSpace(name))
+            {
+                throw new ArgumentException("Name cannot be null, empty or whitespace");
+            }
+
             return "Hello there, " + name;
         }
 
         // overload
         public string SayHello(Person person)
         {
-            return SayHello(person.FirstName
-                + " " + person.LastName);
-        }
+            if (person == null)
+            {
+                throw new ArgumentNullException("Person cannot be null");
+            }
 
+            return SayHello(person.FirstName + " " + person.LastName);
+        }
     }
 }

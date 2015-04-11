@@ -19,14 +19,78 @@ namespace Csharp_Fundamentals
 
             //Console.WriteLine(greeting); 
             #endregion
-            bool result = (6 <= 6);
+            Person stej = new Person("Stej", "O'Connor"),
+                    kate = new Person("Kate", "Bush");
 
-            bool resultString = "test" == "Test";
+            // logical AND &&
+            // true && true - true
+            // true && false - false
+            // false && true - false (short circuit)
+            // false && false - false
 
-            Console.WriteLine(result);
+            // logical OR ||
+            // true || false - true
+            // true || true - true (short circuit)
+            // false || true - true 
+            // false || false - false 
 
-            Console.WriteLine(resultString);
+            // logical NOT !
+            // !true - false
+            // !false - true
+
+            bool hasValue = !string.IsNullOrEmpty("test");
+
+            bool resultName = (stej.FirstName == kate.FirstName) &&
+                (stej.LastName == kate.LastName);
+
+            bool resultString = string.IsNullOrEmpty(string.Empty);
+
+            Console.WriteLine(resultName); // false
+
+            Console.WriteLine(resultString); // true
+
+            Console.WriteLine(hasValue); // true
+
+            string str = "test";
+
+            if (str != "test")
+            {
+                Console.WriteLine("This is true");
+            }
+            else if (str == "tEst")
+            {
+                Console.WriteLine("This is the second true");
+            }
+            else
+            {
+                // verbatim string literal
+                Console.WriteLine(@"This is ""false""");
+            }
+
+            switch (str)
+            {
+                case "test":
+                    Console.WriteLine(@"The value is ""test""");
+                    break;
+                case "Test":
+                    Console.WriteLine(@"The value is ""test""");
+                    break;
+                case "tEst":
+                    Console.WriteLine(@"The value is ""test""");
+                    break;
+                case "tesT":
+                    Console.WriteLine(@"The value is ""test""");
+                    break;
+                default:
+                    Console.WriteLine("No value was found");
+                    break;
+            }
         }
     }
 }
+
+
+
+
+
 

@@ -20,34 +20,32 @@ namespace Csharp_Fundamentals
             //Console.WriteLine(greeting); 
             #endregion
 
-            // for (initialization; condition; incrementation)
+            //char[] foo = new char[5];
 
-            string hello = "Hello, World!";
-            //string heo = "Heo, Word!";
+            //foo[0] = 'H';
+            //foo[1] = 'e';
+            //foo[2] = 'l';
+            //foo[3] = 'l';
+            //foo[4] = 'o';
 
-            //int index = hello.IndexOf("l");
-            //int index1 = heo.IndexOf("l");
+            char[] foo = new char[] {
+                'H', // 0
+                'e', // 1
+                'l', // 2
+                'l', // 3
+                'o' // 4
+            };
 
-            // System.ArgumentOutOfRangeException
-            //do
-            //{
-            //    heo = heo.Remove(index1, 1);
-            //    index1 = heo.IndexOf("l");
-            //}
-
-            // while (index > -1);
-            //{
-            //    hello = hello.Remove(index, 1);
-            //    Console.WriteLine( hello, "I'm in the loop");
-            //    index = hello.IndexOf("l");
-            //}
-
-            // Console.WriteLine(heo);
-            // Console.WriteLine(hello);
-
-            foreach (char c in hello)
+            for (int i = 0; i < foo.Length; i++)
             {
-                Console.Write(c);
+                Console.Write(foo[i]);
+            }
+
+            Console.WriteLine(string.Empty);
+
+            foreach (var item in foo)
+            {
+                Console.Write(item);
             }
 
             Console.WriteLine(string.Empty);

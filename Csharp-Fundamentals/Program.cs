@@ -21,24 +21,36 @@ namespace Csharp_Fundamentals
             #endregion
 
             // for (initialization; condition; incrementation)
-            for (int counter = 0; counter < 10; counter++)
-            {
-                counter = counter + 1; // 1
-                int i = counter++; // i = 0; counter = 1
-                int ii = ++counter; // ii = 1; counter = 1
-            }
-
-            for (int counter = 0; counter < 10; counter++)
-            {
-                Console.WriteLine(counter + 1);
-            }
 
             string hello = "Hello, World!";
+            //string heo = "Heo, Word!";
 
-            for (int counter = 0; counter < hello.Length; counter++)
+            //int index = hello.IndexOf("l");
+            //int index1 = heo.IndexOf("l");
+
+            // System.ArgumentOutOfRangeException
+            //do
+            //{
+            //    heo = heo.Remove(index1, 1);
+            //    index1 = heo.IndexOf("l");
+            //}
+
+            // while (index > -1);
+            //{
+            //    hello = hello.Remove(index, 1);
+            //    Console.WriteLine( hello, "I'm in the loop");
+            //    index = hello.IndexOf("l");
+            //}
+
+            // Console.WriteLine(heo);
+            // Console.WriteLine(hello);
+
+            foreach (char c in hello)
             {
-                Console.WriteLine(counter + 1);
+                Console.Write(c);
             }
+
+            Console.WriteLine(string.Empty);
         }
     }
 }

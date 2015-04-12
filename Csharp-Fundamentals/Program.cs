@@ -20,10 +20,25 @@ namespace Csharp_Fundamentals
             //Console.WriteLine(greeting); 
             #endregion
 
-            Person person = new Person("SteJ");
+            // for (initialization; condition; incrementation)
+            for (int counter = 0; counter < 10; counter++)
+            {
+                counter = counter + 1; // 1
+                int i = counter++; // i = 0; counter = 1
+                int ii = ++counter; // ii = 1; counter = 1
+            }
 
-            person.SayHello("SteJ");
-            person.SayHello("O'Connor");            
+            for (int counter = 0; counter < 10; counter++)
+            {
+                Console.WriteLine(counter + 1);
+            }
+
+            string hello = "Hello, World!";
+
+            for (int counter = 0; counter < hello.Length; counter++)
+            {
+                Console.WriteLine(counter + 1);
+            }
         }
     }
 }

@@ -21,21 +21,26 @@ namespace Csharp_Fundamentals
             #endregion
 
             string[] names = new string[] {
-                "Justi",
+                "Justy",
                 "Jimmy",
-                "Jonno",
+                "Jonny",
                 "Jenny"
             };
 
-            Person stej = new Person("SteJ", "O'Connor");
+            // use var instead of generics
+            var namesList = new List<string>();
+            namesList.AddRange(names);
 
-            Console.WriteLine(stej.SayHello(names));
-            Console.WriteLine(stej.SayHello("Justi", "Jimmy", "Jonno", "Jenny", "Joshy", "SteJ"));
+            // lambda expression
+            var newList = namesList.FindAll((s) => s[1] == 'i');
+
+            foreach (var name in newList)
+            {
+                Console.WriteLine(name);  
+            }            
         }
     }
 }
-
-
 
 
 

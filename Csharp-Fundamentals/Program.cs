@@ -20,35 +20,17 @@ namespace Csharp_Fundamentals
             //Console.WriteLine(greeting); 
             #endregion
 
-            //char[] foo = new char[5];
-
-            //foo[0] = 'H';
-            //foo[1] = 'e';
-            //foo[2] = 'l';
-            //foo[3] = 'l';
-            //foo[4] = 'o';
-
-            char[] foo = new char[] {
-                'H', // 0
-                'e', // 1
-                'l', // 2
-                'l', // 3
-                'o' // 4
+            string[] names = new string[] {
+                "Justi",
+                "Jimmy",
+                "Jonno",
+                "Jenny"
             };
 
-            for (int i = 0; i < foo.Length; i++)
-            {
-                Console.Write(foo[i]);
-            }
+            Person stej = new Person("SteJ", "O'Connor");
 
-            Console.WriteLine(string.Empty);
-
-            foreach (var item in foo)
-            {
-                Console.Write(item);
-            }
-
-            Console.WriteLine(string.Empty);
+            Console.WriteLine(stej.SayHello(names));
+            Console.WriteLine(stej.SayHello("Justi", "Jimmy", "Jonno", "Jenny", "Joshy", "SteJ"));
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
                 throw new ArgumentException("First name cannot be null, empty or whitespace");
             }
 
-            if((lastName == null || lastName.Trim() == string.Empty) && lastName != string.Empty)
+            if ((lastName == null || lastName.Trim() == string.Empty) && lastName != string.Empty)
             {
                 throw new ArgumentException("Last name cannot be null or whitespace");
             }
@@ -52,6 +52,24 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
             }
 
             return SayHello(person.FirstName + " " + person.LastName);
+        }
+
+        public string SayHello(params string[] names)
+        {
+            //StringBuilder builder = new StringBuilder();
+            //string temp = string.Empty;
+
+            //foreach (string name in names)
+            //{                
+            //    builder.Append(name + ", ");
+            //}
+
+            //temp = builder.ToString();
+            //temp = temp.Remove(temp.LastIndexOf(","));
+
+            //return SayHello(temp);
+
+            return SayHello(string.Join(", ", names));
         }
     }
 }

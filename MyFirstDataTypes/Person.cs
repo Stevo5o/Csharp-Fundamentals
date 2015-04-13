@@ -8,8 +8,8 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
     public class Person
     {
         // automatic properties
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
+        public string FirstName { get; protected set; }
+        public string LastName { get; protected set; }
 
         public string MiddleName { get; private set; }
 
@@ -30,7 +30,7 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
             LastName = lastName;
         }
 
-        public string SayHello(string name)
+        public virtual string SayHello(string name)
         {
             // null
             // empty

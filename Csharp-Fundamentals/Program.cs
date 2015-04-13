@@ -27,17 +27,16 @@ namespace Csharp_Fundamentals
                 "Jenny"
             };
 
-            // use var instead of generics
-            var namesList = new List<string>();
-            namesList.AddRange(names);
+            var dictionary = new Dictionary<string, string>();
+            dictionary.Add("a", "SteJ");
+            dictionary.Add("b", "Kate");
 
-            // lambda expression
-            var newList = namesList.FindAll((s) => s[1] == 'i');
-
-            foreach (var name in newList)
+            foreach (var kvp in dictionary)
             {
-                Console.WriteLine(name);  
-            }            
+                Console.WriteLine(kvp.Key + " = " + kvp.Value);
+            }
+
+            string value = dictionary["a"]; // SteJ
         }
     }
 }

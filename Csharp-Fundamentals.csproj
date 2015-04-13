@@ -105,6 +105,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MyFirstDataTypes\Employee.cs" />
+    <Compile Include="MyFirstDataTypes\IFirable.cs" />
+    <Compile Include="MyFirstDataTypes\ISalariable.cs" />
     <Compile Include="MyFirstDataTypes\Program.cs" />
     <Compile Include="MyFirstDataTypes\Person.cs" />
     <Compile Include="MyFirstDataTypes\Shape.cs" />

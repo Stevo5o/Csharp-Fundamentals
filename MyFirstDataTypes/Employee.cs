@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Csharp_Fundamentals.MyFirstDataTypes
 {
-    public class Employee : Person
+    public class Employee : Person, ISalariable, IFirable
     {
-        public Employee(string firstName, string lastName, string position) 
+        public Employee(string firstName, string lastName, string position, decimal salary) 
             : base(firstName, lastName)
         {
             if (string.IsNullOrEmpty(lastName))
@@ -20,7 +20,13 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
                 throw new ArgumentException("Position cannot be null, empty, or whitespace");
             }
 
-            Position = position;          
+            if (_Salary < 1)
+            {
+                throw new ArgumentException("Salary cannnot be less than 1");
+            }
+
+            Position = position;
+            _Salary = salary;
         }       
 
         public string Position { get; protected set; }
@@ -33,6 +39,24 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
         public override string SayHello(string name)
         {
             return "Hi. How may I help you, " + name + "?";
+        }
+
+        private decimal _Salary;
+
+        public decimal Salary
+        {
+            get { return _Salary; }
+        }
+
+        public void PaySalary()
+        {
+            // something important
+        }
+
+        public void Fire()
+        {
+            _Salary = 0;
+            // some imaportant code
         }
     }
 }

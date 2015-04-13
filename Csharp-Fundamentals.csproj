@@ -107,6 +107,8 @@
     <Compile Include="MyFirstDataTypes\Employee.cs" />
     <Compile Include="MyFirstDataTypes\Program.cs" />
     <Compile Include="MyFirstDataTypes\Person.cs" />
+    <Compile Include="MyFirstDataTypes\Shape.cs" />
+    <Compile Include="MyFirstDataTypes\Square.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".git\branches\" />

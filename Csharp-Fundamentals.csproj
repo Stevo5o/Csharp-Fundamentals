@@ -104,8 +104,9 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Csharp-Fundamentals\Program.cs" />
-    <Compile Include="Csharp-Fundamentals\Person.cs" />
+    <Compile Include="MyFirstDataTypes\Employee.cs" />
+    <Compile Include="MyFirstDataTypes\Program.cs" />
+    <Compile Include="MyFirstDataTypes\Person.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".git\branches\" />

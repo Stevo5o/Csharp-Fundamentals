@@ -71,5 +71,10 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
 
             return SayHello(string.Join(", ", names));
         }
+
+        public override string ToString()
+        {
+            return FirstName + " " + LastName;
+        }
     }
 }

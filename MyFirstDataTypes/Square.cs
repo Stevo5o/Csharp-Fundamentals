@@ -11,6 +11,7 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
         public Square(double sideLength)
         {
             Length = sideLength;
+            _Sides = 4;
 
         }
         public override double Area

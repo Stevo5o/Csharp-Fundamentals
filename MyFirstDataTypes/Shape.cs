@@ -11,5 +11,17 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
         {
             get;
         }
+
+        public virtual int Sides
+        {
+            get { return _Sides;  }
+        }
+
+        protected int _Sides;
+
+        public static bool IsPolygon(Shape shape)
+        {
+            return shape.Sides >= 3;
+        }
     }
 }

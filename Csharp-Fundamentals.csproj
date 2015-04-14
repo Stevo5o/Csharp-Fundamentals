@@ -104,6 +104,7 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyFirstDataTypes\Circle.cs" />
     <Compile Include="MyFirstDataTypes\Employee.cs" />
     <Compile Include="MyFirstDataTypes\IFirable.cs" />
     <Compile Include="MyFirstDataTypes\ISalariable.cs" />

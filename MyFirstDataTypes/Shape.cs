@@ -19,9 +19,5 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
 
         protected int _Sides;
 
-        public static bool IsPolygon(Shape shape)
-        {
-            return shape.Sides >= 3;
-        }
     }
 }

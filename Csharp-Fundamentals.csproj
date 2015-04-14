@@ -111,6 +111,7 @@
     <Compile Include="MyFirstDataTypes\Program.cs" />
     <Compile Include="MyFirstDataTypes\Person.cs" />
     <Compile Include="MyFirstDataTypes\Shape.cs" />
+    <Compile Include="MyFirstDataTypes\ShapeUtility.cs" />
     <Compile Include="MyFirstDataTypes\Square.cs" />
   </ItemGroup>
   <ItemGroup>

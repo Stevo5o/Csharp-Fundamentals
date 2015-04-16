@@ -8,11 +8,11 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
     class Square : Shape
     {
         public double Length { get; private set; }
-        public Square(double sideLength)
+        public Square(double sideLength, Color color)
         {
             Length = sideLength;
             _Sides = 4;
-
+            _Color = Color;
         }
         public override double Area
         {

@@ -19,5 +19,11 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
 
         protected int _Sides;
 
+        public virtual Color Color
+        {
+            get { return _Color;  }
+        }
+
+        protected Color _Color;
     }
 }

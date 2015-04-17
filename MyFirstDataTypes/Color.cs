@@ -13,11 +13,11 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
         public byte B { get; private set; }
 
         // constructor to set properties
-        public Color(byte red, byte green, byte blue)
+        public Color(byte red, byte green, byte blue) : this()
         {
-            R = red;
-            G = green;
-            B = blue;
+            this.R = red;
+            this.G = green;
+            this.B = blue;
         }
 
         // static properties

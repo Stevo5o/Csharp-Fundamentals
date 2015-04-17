@@ -22,13 +22,19 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
                 "Jacky"
             };
 
+            // creating delegate
+            Func<string, bool> fn = n => n.IndexOf("e") == 1;
+            // Predicate<string> pred = n => n.IndexOf("e") == 1;
+
+            Func<int, string, bool> fn2 = (i, s) =>
+            {
+                return true;
+            };
+
+            bool result = fn("ae");
+
             //var nameWithE = names.FindAll(FindNamesWithE);
-            var nameWithE = names.FindAll(
-                delegate(string name)
-                {
-                    return name.IndexOf("e") == 1;
-                }
-            );
+            var nameWithE = names.FindAll(n => n.IndexOf("e") == 1);
 
             foreach (var name in nameWithE)
             {
@@ -36,10 +42,10 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
             }
         }
 
-        //static bool FindNamesWithE(string name)
-        //{
-        //    return name.IndexOf("e") == 1;
-        //}
+        static bool FindNamesWithE(string name)
+        {
+            return name.IndexOf("e") == 1;
+        }
     }
 }
 

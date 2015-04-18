@@ -13,24 +13,30 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
             #region Team Fortess Data Store
             // anonymous object
             IEnumerable<Character> teamFortessTwo = new Character[] {
-                new Character("Scout","", CharacterClass.Offense, 200000),
-                new Character("Soldier","", CharacterClass.Offense, 200000),
-                new Character("Pyro","", CharacterClass.Offense, 200000),
-                new Character("Demoman","", CharacterClass.Defense, 200000),
-                new Character("Heavy","", CharacterClass.Defense, 200000),
-                new Character("Engineer","", CharacterClass.Defense, 200000),
-                new Character("Medic","", CharacterClass.Support, 200000),
-                new Character("Sniper","", CharacterClass.Support, 200000),
-                new Character("Spy","", CharacterClass.Support, 200000)	
+                new Character("Scout", CharacterClass.Offense),
+                new Character("Soldier", CharacterClass.Offense),
+                new Character("Pyro", CharacterClass.Offense),
+                new Character("Demoman", CharacterClass.Defense),
+                new Character("Heavy", CharacterClass.Defense),
+                new Character("Engineer", CharacterClass.Defense),
+                new Character("Medic", CharacterClass.Support),
+                new Character("Sniper", CharacterClass.Support),
+                new Character("Spy", CharacterClass.Support)	
             };
             #endregion
-
             // Lanugae INetrated Query
-            var query = from character in teamFortessTwo
-                        where character.
-	{
-		 
-	}
+
+            var query = teamFortessTwo.GroupBy(e => e.CharacterClass);
+
+            foreach (var group in query)
+            {
+                Console.WriteLine(group.Key);
+                foreach (var character in group)
+                {
+                    Console.WriteLine(character.Name);
+                }
+                Console.WriteLine();
+            }
         }
     }
 }

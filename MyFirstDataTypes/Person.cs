@@ -7,10 +7,10 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
 {
     public class Person
     {
+
         // automatic properties
         public string FirstName { get; protected set; }
         public string LastName { get; protected set; }
-
         public string MiddleName { get; private set; }
 
         // remove overload and add optional parameters

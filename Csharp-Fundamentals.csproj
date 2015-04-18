@@ -106,7 +106,9 @@
   <ItemGroup>
     <Compile Include="MyFirstDataTypes\Circle.cs" />
     <Compile Include="MyFirstDataTypes\Color.cs" />
+    <Compile Include="MyFirstDataTypes\Charactar.cs" />
     <Compile Include="MyFirstDataTypes\Employee.cs" />
+    <Compile Include="MyFirstDataTypes\CharacterClass.cs" />
     <Compile Include="MyFirstDataTypes\EmployeePosition.cs" />
     <Compile Include="MyFirstDataTypes\IFirable.cs" />
     <Compile Include="MyFirstDataTypes\ISalariable.cs" />

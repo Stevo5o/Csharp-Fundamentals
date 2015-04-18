@@ -10,41 +10,27 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
     {
         static void Main(string[] args)
         {
-            var names = new List<string> {
-                "Justy",
-                "Jimmy",
-                "Jonny",
-                "Jenny",
-                "Jakey",
-                "Julie",
-                "Jeffy",
-                "Jammy",
-                "Jacky"
+            #region Team Fortess Data Store
+            // anonymous object
+            IEnumerable<Character> teamFortessTwo = new Character[] {
+                new Character("Scout","", CharacterClass.Offense, 200000),
+                new Character("Soldier","", CharacterClass.Offense, 200000),
+                new Character("Pyro","", CharacterClass.Offense, 200000),
+                new Character("Demoman","", CharacterClass.Defense, 200000),
+                new Character("Heavy","", CharacterClass.Defense, 200000),
+                new Character("Engineer","", CharacterClass.Defense, 200000),
+                new Character("Medic","", CharacterClass.Support, 200000),
+                new Character("Sniper","", CharacterClass.Support, 200000),
+                new Character("Spy","", CharacterClass.Support, 200000)	
             };
+            #endregion
 
-            // creating delegate
-            Func<string, bool> fn = n => n.IndexOf("e") == 1;
-            // Predicate<string> pred = n => n.IndexOf("e") == 1;
-
-            Func<int, string, bool> fn2 = (i, s) =>
-            {
-                return true;
-            };
-
-            bool result = fn("ae");
-
-            //var nameWithE = names.FindAll(FindNamesWithE);
-            var nameWithE = names.FindAll(n => n.IndexOf("e") == 1);
-
-            foreach (var name in nameWithE)
-            {
-                Console.WriteLine(name);
-            }
-        }
-
-        static bool FindNamesWithE(string name)
-        {
-            return name.IndexOf("e") == 1;
+            // Lanugae INetrated Query
+            var query = from character in teamFortessTwo
+                        where character.
+	{
+		 
+	}
         }
     }
 }

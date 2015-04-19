@@ -12,14 +12,26 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
         {
             try
             {
-                Shape nullShape = null;
-
-                Console.WriteLine(nullShape.IsPolygon());
+                throw new System.Net.WebException();
+                throw new System.IO.FileNotFoundException();
+                throw new OutOfMemoryException();
             }
-            catch (Exception e)
+            catch (System.Net.WebException webex)
+            {
+                Console.WriteLine("We cannot retrieve the request web resource");
+            }
+            catch (System.IO.FileNotFoundException fileEx)
+            {
+                Console.WriteLine("We cannot fid the file needed to save the Document");
+            }
+            catch (Exception)
             {
                 Console.WriteLine("Cannot Error");
-            }        
+            }
+            finally
+            {
+                Console.WriteLine("We're in the finally block");
+            }
         }
     }
 }

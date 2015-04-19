@@ -10,27 +10,19 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
     {
         static void Main(string[] args)
         {
-            try
+            WriteTimesTable(2);
+
+            Console.WriteLine("We're out of WriteTimesTable");
+        }
+
+        static void WriteTimesTable(int multiplier)
+        {
+            for (int i = 1; i < 13; i++)
             {
-                throw new System.Net.WebException();
-                throw new System.IO.FileNotFoundException();
-                throw new OutOfMemoryException();
-            }
-            catch (System.Net.WebException webex)
-            {
-                Console.WriteLine("We cannot retrieve the request web resource");
-            }
-            catch (System.IO.FileNotFoundException fileEx)
-            {
-                Console.WriteLine("We cannot fid the file needed to save the Document");
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Cannot Error");
-            }
-            finally
-            {
-                Console.WriteLine("We're in the finally block");
+                string str = string.Format("{0} * {1} = {2}",
+                    i, multiplier, i * multiplier);
+
+                Console.WriteLine(str);
             }
         }
     }

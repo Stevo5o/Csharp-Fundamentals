@@ -10,33 +10,16 @@ namespace Csharp_Fundamentals.MyFirstDataTypes
     {
         static void Main(string[] args)
         {
-            #region Team Fortess Data Store
-            // anonymous object
-            IEnumerable<Character> teamFortessTwo = new Character[] {
-                new Character("Scout", CharacterClass.Offense),
-                new Character("Soldier", CharacterClass.Offense),
-                new Character("Pyro", CharacterClass.Offense),
-                new Character("Demoman", CharacterClass.Defense),
-                new Character("Heavy", CharacterClass.Defense),
-                new Character("Engineer", CharacterClass.Defense),
-                new Character("Medic", CharacterClass.Support),
-                new Character("Sniper", CharacterClass.Support),
-                new Character("Spy", CharacterClass.Support)	
-            };
-            #endregion
-            // Lanugae INetrated Query
-
-            var query = teamFortessTwo.GroupBy(e => e.CharacterClass);
-
-            foreach (var group in query)
+            try
             {
-                Console.WriteLine(group.Key);
-                foreach (var character in group)
-                {
-                    Console.WriteLine(character.Name);
-                }
-                Console.WriteLine();
+                Shape nullShape = null;
+
+                Console.WriteLine(nullShape.IsPolygon());
             }
+            catch (Exception e)
+            {
+                Console.WriteLine("Cannot Error");
+            }        
         }
     }
 }
